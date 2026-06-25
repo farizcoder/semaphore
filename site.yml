@@ -1,5 +1,5 @@
 ---
-  - hosts: web_server
+  - hosts: web-server
     become: true
     tasks:
     - name: start service apache
