@@ -2,6 +2,7 @@
   - hosts: web_server
     become: true
     tasks:
-      ansible.builtin.service:
-        - name: "{{ apache_package }}"
-          state: started
+      - name: start service apache
+        service:
+          - name: "{{ apache_package }}"
+            state: started
