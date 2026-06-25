@@ -3,4 +3,4 @@
     become: true
     ansible.builtin.service:
       - name: "{{ apache_package }}"
-        state: start
+        state: started
