@@ -3,6 +3,6 @@
     become: true
     tasks:
       - name: start service apache
-        service:
-          name: "{{ apache_package }}"
+        ansible.builtin.service:
+          name: httpd.service
           state: started
