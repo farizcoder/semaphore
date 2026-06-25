@@ -1,5 +1,5 @@
 ---
-  - host: web_server
+  - hosts: web_server
     become: true
     ansible.builtin.service:
       - name: "{{ apache_package }}"
