@@ -1,6 +1,7 @@
 ---
   - hosts: web_server
     become: true
-    ansible.builtin.service:
-      - name: "{{ apache_package }}"
-        state: started
+    tasks:
+      ansible.builtin.service:
+        - name: "{{ apache_package }}"
+          state: started
