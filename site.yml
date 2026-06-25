@@ -1,8 +1,8 @@
 ---
-  - hosts: web-server
+  - hosts: web_server
     become: true
     tasks:
-    - name: start service apache
-      service:
-        name: "{{ apache_package }}"
-        state: started
+      - name: start service apache
+        service:
+          name: "{{ apache_package }}"
+          state: started
