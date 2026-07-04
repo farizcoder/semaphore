@@ -1,0 +1,10 @@
+---
+
+  - name: Restarting services
+    hosts: debian
+    become: true
+    tasks:
+      - name: Restarting apache
+        service:
+          name: apache2
+          state: restarted
